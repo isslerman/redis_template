@@ -1,4 +1,4 @@
-# redis_template
+# Redis with docker compose ready to use template. 
 Redis ready-to-use with docker-compose file and a redis.conf file.
 As default server listen to all interfaces. Do not use in production, adjust redis.conf first. 
 
