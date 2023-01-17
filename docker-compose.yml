@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  redis-cache:
+    image: redis
+    container_name: redis
+    restart: on-failure
+    ports:
+      - 10002:5432
+    volumes:
+      - redis-data:/data
+    networks:
+      - cache-spotify-network
+volumes:
+  redis-data:
+networks:
+  default:
+    external:
+      name: docker-dev-network
