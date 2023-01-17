@@ -6,11 +6,11 @@ services:
     container_name: redis
     restart: on-failure
     ports:
-      - 10002:5432
+      - 10002:6379
     volumes:
       - redis-data:/data
-    networks:
-      - cache-spotify-network
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    network_mode: bridge
 volumes:
   redis-data:
 networks:
